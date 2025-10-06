@@ -14,7 +14,7 @@ public class CatExample {
 		
 		System.out.println("Grooming " + cat2.getName());
 		//TODO: add method call to groom cat2
-		
+		cat2.groom();
 		
 		System.out.println(cat1.getName() + " is purring: " + cat1.isPurring()); 
 		System.out.println(cat2.getName() + " is purring: " + cat2.isPurring()); 
@@ -50,7 +50,7 @@ class Cat {
     public void giveTreat() { isPurring = true; }
 
 	//TODO: Implement groom method to assign isPurring to false
-	
+	public void groom() { isPurring = false;}
 
 }
 

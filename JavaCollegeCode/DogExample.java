@@ -7,20 +7,22 @@ public class DogExample {
 		//TODO: Create a third dog named Woofster who is wagging their tail and like baths
         Dog dog1 = new Dog("Snuggles", true, false); 
         Dog dog2 = new Dog("Fido", false, true);
-        
+        Dog dog3 = new Dog("Woofster", true, true);
         //TODO: Print initial state of all 3 dogs
         System.out.println("After creating new dogs:");
         dog1.printState();
         dog2.printState();
-        
+        dog3.printState();
         //TODO: Give all 3 dogs a bath
-       
+       dog1.giveBath();
+       dog2.giveBath();
+       dog3.giveBath();
         
         //TODO: Print final state of all 3 dogs
         System.out.println("After baths:");
         dog1.printState();
         dog2.printState();
-  
+        dog3.printState();
     }
 }
 
@@ -46,5 +48,13 @@ class Dog {
      }
      
      //TODO: Implement giveBath method to assign isWaggingTail to likesBaths
+     public void giveBath() {
+    	 if(likesBaths == true) {
+    		 isWaggingTail = true;
+    	 }
+    	 else {
+    		 isWaggingTail = false;
+    	 }
+     }
      
 }
