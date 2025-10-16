@@ -1,0 +1,28 @@
+import requests
+import json
+
+"""
+this code is simply to pull all the keys from the api you will need to pull one item for instance for the pokemon api your var would be a pokemon or their number. 
+"""
+
+def show_available_fields(var):
+    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon.lower()}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        data = response.json()
+
+        # Print all top-level keys
+        print("Available top-level fields:\n")
+        for key in data.keys():
+            print("-", key)
+
+        # (Optional) print full formatted JSON to explore nested fields
+        print("\nFull JSON structure:\n")
+        print(json.dumps(data, indent=2))  # pretty-print the entire JSON
+    else:
+        print("var not found.")
+
+
+# Example usage:
+show_available_fields(1)
