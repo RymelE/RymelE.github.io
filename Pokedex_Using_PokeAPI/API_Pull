@@ -1,0 +1,27 @@
+import requests
+
+def get_pokemon_data(pokemon):
+    url = f"https://pokeapi.co/api/v2/pokemon/{pokemon.lower()}"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        
+        name = data["name"].title()
+        pokemon_id = data["id"]
+        types = [t["type"]["name"] for t in data["types"]]
+        sprite = data["sprites"]["front_default"]
+        
+        print(f"Name: {name}")
+        print(f"ID: {pokemon_id}")
+        print(f"Types: {', '.join(types)}")
+        print(f"Sprite URL: {sprite}")
+        
+        return data  
+    else:
+        print("Pokémon not found.")
+        return None
+
+
+pokemon = input("Enter a pokemon name or number")
+get_pokemon_data(pokemon)
