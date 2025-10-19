@@ -1,0 +1,28 @@
+Strings 
+
+Strings are objects made up of chars
+you can index them useing 
+charAt(index) method 
+example 
+        String word = "hello";
+        char ch = word.charAt(2);
+var.length() method get a number (great for for loops and arrays)
+var.lastIndexof('char') #var is the string and char is the character you are looking for 
+var.Indexof('char')
+toLowerCase() toUpperCase()
+
+String class has 13 constructors and 40 methods 
+
+literal is what the var is equal to 
+exmaple:   x = "hello" hello is the literal in this case
+
+there are two ways to create strings the normal way 
+String hi = "hello" # this string is create as an obj because it is not a prim type 
+String hi = new String("hello") # this is the same but it forces the obj creation
+
+it can also be created using an array of char[]
+exmaple 
+char[] charArray = {'g', 'o', 'o', 'd', ' ', 'd', 'a', 'y'};
+String Message = new STring(charArray); 
+
+
