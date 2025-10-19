@@ -12,6 +12,18 @@ var.Indexof('char')
 toLowerCase() toUpperCase()
 
 String class has 13 constructors and 40 methods 
+Source	Example
+Empty	new String()
+String	new String("hello")
+Char array	new String(charArray)
+Char array with offset/count	new String(charArray, offset, count)
+Byte array	new String(byteArray)
+Byte array with offset/count	new String(byteArray, offset, length)
+Byte array with charset	new String(byteArray, "UTF-8")
+Byte array with offset/count + charset	new String(byteArray, offset, length, "UTF-8")
+StringBuffer	new String(stringBuffer)
+StringBuilder	new String(stringBuilder)
+Legacy/Deprecated ASCII/hibyte versions	Rarely used
 
 literal is what the var is equal to 
 exmaple:   x = "hello" hello is the literal in this case
@@ -24,5 +36,30 @@ it can also be created using an array of char[]
 exmaple 
 char[] charArray = {'g', 'o', 'o', 'd', ' ', 'd', 'a', 'y'};
 String Message = new STring(charArray); 
+
+
+replace method 
+"Welcome".replaceAll("e", "AB") --> WABlcomAB
+note if you dont set the var = to the method the orginal will be unchanged 
+
+
+split() method
+"Java#HTML#Pearl".split("#");
+for (int i = 0; i < tokens.length; i++)
+        System.out.print(tokens[i] + " ");
+
+regex regular expresion 
+.matches() # use a .*
+.equals() 
+matches can be used with a .* to find anything after 
+for example all are true:
+"Java is fun".matches("Java.*")
+"Java is cool".matches("Java.*")
+"Java is powerful".matches("Java.*")
+
+to match digits try 
+"440-02-4534".matches("\\d{3}-\\d{2}-||d{4}")
+\\d is for digits the {2} is for 2 digits so we are looking for d[{3} the a - then 2 didgits a - and the 4 didgits 
+its a pattern recognitition 
 
 
