@@ -62,4 +62,13 @@ to match digits try
 \\d is for digits the {2} is for 2 digits so we are looking for d[{3} the a - then 2 didgits a - and the 4 didgits 
 its a pattern recognitition 
 
+string builder 
 
+StringBuilder stringBuilder = new StringBuilder();
+stringBuilder.append("Welcome");
+stringBuilder.append(' '); 
+it will combine them to one string it will modify the orginal var 
+methods to use on stringbuilder 
+toString()
+capacity()
+carAt(index: int): char
